@@ -1,7 +1,11 @@
-using System.IO;
+using Android.Content;
+using Android.Content.Res;
+using Android.Graphics;
 using Xamarin.Forms;
 using IconEntry.FormsPlugin.Android;
 using Xamarin.Forms.Platform.Android;
+using Application = Android.App.Application;
+using Path = System.IO.Path;
 using Resource = Android.Resource;
 
 [assembly: ExportRenderer(typeof(IconEntry.FormsPlugin.Abstractions.IconEntry), typeof(IconEntryRenderer))]
@@ -38,7 +42,10 @@ namespace IconEntry.FormsPlugin.Android
             if (!string.IsNullOrEmpty(view.Icon))
             {
                 //var resId = Resources.GetIdentifier(view.Icon,"drawable", PackageName)
-                var resId = (int)typeof(Resource.Drawable).GetField(Path.GetFileNameWithoutExtension(view.Icon)).GetValue(null);
+                //var resId = (int)typeof(Resource.Drawable).GetField(Path.GetFileNameWithoutExtension(view.Icon)).GetValue(null);
+
+                var context = Forms.Context;
+                var resId = context.Resources.GetIdentifier(Path.GetFileNameWithoutExtension(view.Icon), "drawable", context.PackageName);
                 Control.SetCompoundDrawablesWithIntrinsicBounds(resId, 0, 0, 0);
             }
             else

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IconEntrySample"
+             xmlns:ie="clr-namespace:IconEntry.FormsPlugin.Abstractions;assembly=IconEntry.FormsPlugin.Abstractions"
+             x:Class="IconEntrySample.MainPage">
+
+	<StackLayout Padding="20,100,20,0">
+        <Label Text="Login" HorizontalTextAlignment="Center" FontSize="30"></Label>
+        <ie:IconEntry Placeholder="Please input your username" Icon="username.png"></ie:IconEntry>
+        <ie:IconEntry Placeholder="Please input your password" Icon="password.png" IsPassword="True"></ie:IconEntry>
+    </StackLayout>
+
+</ContentPage>
