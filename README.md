@@ -6,24 +6,13 @@ Add a pretty icon for your Entry control.
 
 ### Usage
 
-```xaml
-<StackLayout>
-   <ie:IconEntry PlaceHolder="Please input your name" Icon="username.png" />
-   <ie:IconEntry PlaceHolder="Please input your password" Icon="password.png" />
-</StackLayout>
+In your iOS, Android, and Windows UWP projects call:
+```
+Xamarin.Forms.Init();//platform specific init
+IconEntryRenderer.Init();
 ```
 
-**Platform Support**
-
-|Platform|Supported|Version|
-| ------------------- | :-----------: | :------------------: |
-|Xamarin.iOS|Yes|iOS 7+|
-|Xamarin.Android|Yes|API 10+|
-|Windows 10 UWP|Yes|10+|
-
-**UWP Project**
-
-In UWP Project, you should first merge the ResourceDictionary defined in plugin library into App.xaml.
+In you UWP projects, you should first merge the ResourceDictionary defined in plugin library into App.xaml.
 
 ```xaml
 <Application
@@ -41,3 +30,21 @@ In UWP Project, you should first merge the ResourceDictionary defined in plugin 
     </Application.Resources>
 </Application>
 ```
+
+Then in your Shared/PCL XAML page, add IconEntry control as below: 
+
+```xaml
+<StackLayout>
+   <ie:IconEntry PlaceHolder="Please input your name" Icon="username.png" x:Name="UserNameEntry" />
+   <ie:IconEntry PlaceHolder="Please input your password" Icon="password.png" x:Name="PasswordEntry" />
+</StackLayout>
+```
+
+
+**Platform Support**
+
+|Platform|Supported|Version|
+| ------------------- | :-----------: | :------------------: |
+|Xamarin.iOS|Yes|iOS 7+|
+|Xamarin.Android|Yes|API 10+|
+|Windows 10 UWP|Yes|10+|
