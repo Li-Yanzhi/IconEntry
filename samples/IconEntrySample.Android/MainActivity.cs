@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using IconEntry.FormsPlugin.Android;
 using Xamarin.Forms;
 
 namespace IconEntrySample.Droid
@@ -21,6 +22,7 @@ namespace IconEntrySample.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            IconEntryRenderer.Init();
             LoadApplication(new App());
         }
     }

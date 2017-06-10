@@ -1,4 +1,6 @@
-﻿using UIKit;
+﻿using System;
+using Foundation;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using IconEntry.FormsPlugin.iOS;
@@ -9,8 +11,17 @@ namespace IconEntry.FormsPlugin.iOS
     /// <summary>
     /// IconEntry Renderer
     /// </summary>
+    [Preserve(AllMembers = true)]
     public class IconEntryRenderer : EntryRenderer
     {
+        /// <summary>
+        /// Used for registration with dependency service
+        /// </summary>
+        public async static void Init()
+        {
+            var temp = DateTime.Now;
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);

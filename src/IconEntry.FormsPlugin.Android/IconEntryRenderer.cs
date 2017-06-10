@@ -1,12 +1,9 @@
-using Android.Content;
-using Android.Content.Res;
-using Android.Graphics;
+using System;
+using Android.Runtime;
 using Xamarin.Forms;
 using IconEntry.FormsPlugin.Android;
 using Xamarin.Forms.Platform.Android;
-using Application = Android.App.Application;
 using Path = System.IO.Path;
-using Resource = Android.Resource;
 
 [assembly: ExportRenderer(typeof(IconEntry.FormsPlugin.Abstractions.IconEntry), typeof(IconEntryRenderer))]
 namespace IconEntry.FormsPlugin.Android
@@ -14,8 +11,14 @@ namespace IconEntry.FormsPlugin.Android
     /// <summary>
     /// IconEntry Renderer
     /// </summary>
+    [Preserve(AllMembers = true)]
     public class IconEntryRenderer : EntryRenderer
     {
+        public async static void Init()
+        {
+            var temp = DateTime.Now;
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
@@ -44,9 +47,17 @@ namespace IconEntry.FormsPlugin.Android
                 //var resId = Resources.GetIdentifier(view.Icon,"drawable", PackageName)
                 //var resId = (int)typeof(Resource.Drawable).GetField(Path.GetFileNameWithoutExtension(view.Icon)).GetValue(null);
 
-                var context = Forms.Context;
-                var resId = context.Resources.GetIdentifier(Path.GetFileNameWithoutExtension(view.Icon), "drawable", context.PackageName);
-                Control.SetCompoundDrawablesWithIntrinsicBounds(resId, 0, 0, 0);
+                try
+                {
+                    var context = Forms.Context;
+                    var resId = context.Resources.GetIdentifier(Path.GetFileNameWithoutExtension(view.Icon), "drawable", context.PackageName);
+                    if(resId != 0)
+                        Control.SetCompoundDrawablesWithIntrinsicBounds(resId, 0, 0, 0);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
             else
             {

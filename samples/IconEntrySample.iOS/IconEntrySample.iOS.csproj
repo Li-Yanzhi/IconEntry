@@ -116,11 +116,11 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="IconEntry.FormsPlugin.Abstractions">
-      <HintPath>..\..\src\IconEntry.FormsPlugin.Android\bin\Debug\IconEntry.FormsPlugin.Abstractions.dll</HintPath>
+    <Reference Include="IconEntry.FormsPlugin.Abstractions, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.FormsPlugin.IconEntry.1.0.1\lib\Xamarin.iOS10\IconEntry.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="IconEntry.FormsPlugin.iOS">
-      <HintPath>..\..\src\IconEntry.FormsPlugin.iOS\bin\iPhone\Debug\IconEntry.FormsPlugin.iOS.dll</HintPath>
+    <Reference Include="IconEntry.FormsPlugin.iOS, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.FormsPlugin.IconEntry.1.0.1\lib\Xamarin.iOS10\IconEntry.FormsPlugin.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

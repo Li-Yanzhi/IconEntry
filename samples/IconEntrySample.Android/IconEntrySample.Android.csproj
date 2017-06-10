@@ -51,8 +51,11 @@
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
-    <Reference Include="IconEntry.FormsPlugin.Android">
-      <HintPath>..\..\src\IconEntry.FormsPlugin.Android\bin\Debug\IconEntry.FormsPlugin.Android.dll</HintPath>
+    <Reference Include="IconEntry.FormsPlugin.Abstractions, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.FormsPlugin.IconEntry.1.0.1\lib\MonoAndroid10\IconEntry.FormsPlugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="IconEntry.FormsPlugin.Android, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.FormsPlugin.IconEntry.1.0.1\lib\MonoAndroid10\IconEntry.FormsPlugin.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />

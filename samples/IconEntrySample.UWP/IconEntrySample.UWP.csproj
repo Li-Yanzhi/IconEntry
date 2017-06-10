@@ -159,11 +159,6 @@
       <Name>IconEntrySample</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="IconEntry.FormsPlugin.UWP">
-      <HintPath>..\..\src\IconEntry.FormsPlugin.UWP\bin\Debug\IconEntry.FormsPlugin.UWP.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

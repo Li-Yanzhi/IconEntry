@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Xam.FormsPlugin.IconEntry</id>
+        <version>1.0.1</version>
+        <title>IconEntry Plugin for Xamarin.Forms</title>
+        <authors>Yanzhi Li</authors>
+        <owners>Yanzhi Li</owners>
+        <projectUrl>https://github.com/Li-Yanzhi/IconEntry</projectUrl>
+        <iconUrl>https://github.com/Li-Yanzhi/IconEntry/art/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Add an icon in Xamarin Forms Entry control.</description>
+        <summary>IconEntry Plugin for Xamarin.Forms</summary>
+        <copyright>Copyright © Yanzhi Li</copyright>
+        <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows, UWP, entry</tags>
+        <dependencies>
+            <dependency id="Xamarin.Forms" version="[2.0, 3.0)" />
+        </dependencies>
+    </metadata>
+    <files>
+        <!-- PCL -->
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\IconEntry.FormsPlugin.Abstractions.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\IconEntry.FormsPlugin.Abstractions.pdb" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.XML" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\IconEntry.FormsPlugin.Abstractions.xml" />
+        
+        <!--Xamarin.Android-->
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.dll" target="lib\MonoAndroid10\IconEntry.FormsPlugin.Abstractions.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.pdb" target="lib\MonoAndroid10\IconEntry.FormsPlugin.Abstractions.pdb" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.XML" target="lib\MonoAndroid10\IconEntry.FormsPlugin.Abstractions.xml" />
+        <file src="..\src\IconEntry.FormsPlugin.Android\bin\Release\IconEntry.FormsPlugin.Android.dll" target="lib\MonoAndroid10\IconEntry.FormsPlugin.Android.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.Android\bin\Release\IconEntry.FormsPlugin.Android.pdb" target="lib\MonoAndroid10\IconEntry.FormsPlugin.Android.pdb" />
+        <file src="..\src\IconEntry.FormsPlugin.Android\bin\Release\IconEntry.FormsPlugin.Android.XML" target="lib\MonoAndroid10\IconEntry.FormsPlugin.Android.xml" />
+        
+        <!--Xamarin.iOS -->
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.dll" target="lib\Xamarin.iOS10\IconEntry.FormsPlugin.Abstractions.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.XML" target="lib\Xamarin.iOS10\IconEntry.FormsPlugin.Abstractions.xml" />
+        <file src="..\src\IconEntry.FormsPlugin.iOS\bin\iPhone\Release\IconEntry.FormsPlugin.iOS.dll" target="lib\Xamarin.iOS10\IconEntry.FormsPlugin.iOS.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.iOS\bin\iPhone\Release\IconEntry.FormsPlugin.iOS.XML" target="lib\Xamarin.iOS10\IconEntry.FormsPlugin.iOS.xml" />
+
+        <!--UWP-->
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.dll" target="lib\UAP10\IconEntry.FormsPlugin.Abstractions.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.pdb" target="lib\UAP10\IconEntry.FormsPlugin.Abstractions.pdb" />
+        <file src="..\src\IconEntry.FormsPlugin.Abstractions\bin\Release\IconEntry.FormsPlugin.Abstractions.XML" target="lib\UAP10\IconEntry.FormsPlugin.Abstractions.xml" />
+        <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP.dll" target="lib\UAP10\IconEntry.FormsPlugin.UWP.dll" />
+        <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP.pdb" target="lib\UAP10\IconEntry.FormsPlugin.UWP.pdb" />
+        <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP.pri" target="lib\UAP10\IconEntry.FormsPlugin.UWP.pri" />
+        <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP\IconEntryStyle.xaml" target="lib\UAP10\IconEntry.FormsPlugin.UWP\IconEntryStyle.xaml" />
+        <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP\IconEntry.FormsPlugin.UWP.xr.xml" target="lib\UAP10\IconEntry.FormsPlugin.UWP\IconEntry.FormsPlugin.UWP.xr.xml" />
+    </files>
+</package>

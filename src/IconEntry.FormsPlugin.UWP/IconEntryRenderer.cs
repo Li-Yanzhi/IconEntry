@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 using Windows.UI.Xaml.Media;
@@ -14,6 +10,11 @@ namespace IconEntry.FormsPlugin.UWP
 {
     public class IconEntryRenderer : EntryRenderer
     {
+        public async static void Init()
+        {
+            var temp = DateTime.Now;
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
@@ -51,7 +52,9 @@ namespace IconEntry.FormsPlugin.UWP
                 Control.Background = ib;
 
                 //Should merge IconEntryStyle in Application Resource Dictionaries firstly
-                Control.Style = (Windows.UI.Xaml.Style)Windows.UI.Xaml.Application.Current.Resources["IconTextBoxStyle"];
+                var style = Windows.UI.Xaml.Application.Current.Resources["IconTextBoxStyle"];
+                if (style != null)
+                    Control.Style = (Windows.UI.Xaml.Style) style;
             }
         }
     }

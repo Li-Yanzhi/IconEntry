@@ -1,6 +1,7 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Xam.FormsPlugin.IconEntry": "1.0.1",
     "Xamarin.Forms": "2.3.4.224"
   },
   "frameworks": {
