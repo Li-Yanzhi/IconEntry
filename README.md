@@ -2,6 +2,10 @@
 
 Add a pretty icon for your Entry control.
 
+[![NuGet](https://img.shields.io/nuget/v/Xam.FormsPlugin.IconEntry.svg?maxAge=2592000)](https://www.nuget.org/packages/Xam.FormsPlugin.IconEntry/)
+
+### Screenshots
+
 ![IconEntry Screenshot](./art/Screenshot.png)
 
 ### Usage
