@@ -7,7 +7,7 @@
         <authors>Yanzhi Li</authors>
         <owners>Yanzhi Li</owners>
         <projectUrl>https://github.com/Li-Yanzhi/IconEntry</projectUrl>
-        <iconUrl>https://github.com/Li-Yanzhi/IconEntry/art/icon.png</iconUrl>
+        <iconUrl>https://raw.githubusercontent.com/Li-Yanzhi/IconEntry/master/art/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Add an icon in Xamarin Forms Entry control.</description>
         <summary>IconEntry Plugin for Xamarin.Forms</summary>
