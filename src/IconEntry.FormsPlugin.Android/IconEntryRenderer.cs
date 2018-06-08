@@ -1,9 +1,12 @@
 using System;
 using Android.Runtime;
+using App = Android.App;
 using Xamarin.Forms;
 using IconEntry.FormsPlugin.Android;
 using Xamarin.Forms.Platform.Android;
 using Path = System.IO.Path;
+using Android.Content;
+
 
 [assembly: ExportRenderer(typeof(IconEntry.FormsPlugin.Abstractions.IconEntry), typeof(IconEntryRenderer))]
 namespace IconEntry.FormsPlugin.Android
@@ -14,11 +17,27 @@ namespace IconEntry.FormsPlugin.Android
     [Preserve(AllMembers = true)]
     public class IconEntryRenderer : EntryRenderer
     {
+        /// <summary>
+        /// Context
+        /// </summary>
+        /// <param name="context"></param>
+        public IconEntryRenderer(Context context)
+            : base(context)
+        {
+        }
+
+        /// <summary>
+        /// Init
+        /// </summary>
         public async static void Init()
         {
             var temp = DateTime.Now;
         }
 
+        /// <summary>
+        /// Event for ElementChanged
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
@@ -31,6 +50,11 @@ namespace IconEntry.FormsPlugin.Android
             }
         }
 
+        /// <summary>
+        /// Event for Element Property Changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
@@ -49,7 +73,9 @@ namespace IconEntry.FormsPlugin.Android
 
                 try
                 {
-                    var context = Forms.Context;
+                    //Context context => CrossCurrentActivity.Current.Activity;
+                    
+                    var context = App.Application.Context;
                     var resId = context.Resources.GetIdentifier(Path.GetFileNameWithoutExtension(view.Icon), "drawable", context.PackageName);
                     if(resId != 0)
                         Control.SetCompoundDrawablesWithIntrinsicBounds(resId, 0, 0, 0);

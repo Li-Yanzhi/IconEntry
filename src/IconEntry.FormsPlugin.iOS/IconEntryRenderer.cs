@@ -22,6 +22,10 @@ namespace IconEntry.FormsPlugin.iOS
             var temp = DateTime.Now;
         }
 
+        /// <summary>
+        /// Event for Element Changed
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
@@ -34,6 +38,11 @@ namespace IconEntry.FormsPlugin.iOS
             }
         }
 
+        /// <summary>
+        /// Event for Element Property Changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
