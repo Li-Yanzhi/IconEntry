@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Xam.FormsPlugin.IconEntry</id>
-        <version>1.1.0</version>
+        <version>1.1.1</version>
         <title>IconEntry Plugin for Xamarin.Forms</title>
         <authors>Yanzhi Li</authors>
         <owners>Yanzhi Li</owners>
@@ -14,7 +14,7 @@
         <copyright>Copyright © Yanzhi Li</copyright>
         <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows, UWP, entry</tags>
         <dependencies>
-            <dependency id="Xamarin.Forms" version="[3.0, 4.0)" />
+            <dependency id="Xamarin.Forms" version="[2.5, 4.0)" />
         </dependencies>
     </metadata>
     <files>
@@ -45,6 +45,7 @@
         <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP.pdb" target="lib\UAP10\IconEntry.FormsPlugin.UWP.pdb" />
         <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP.pri" target="lib\UAP10\IconEntry.FormsPlugin.UWP.pri" />
         <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP\IconEntryStyle.xaml" target="lib\UAP10\IconEntry.FormsPlugin.UWP\IconEntryStyle.xaml" />
+        <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP\IconEntryStyle.xbf" target="lib\UAP10\IconEntry.FormsPlugin.UWP\IconEntryStyle.xbf" />        
         <file src="..\src\IconEntry.FormsPlugin.UWP\bin\Release\IconEntry.FormsPlugin.UWP\IconEntry.FormsPlugin.UWP.xr.xml" target="lib\UAP10\IconEntry.FormsPlugin.UWP\IconEntry.FormsPlugin.UWP.xr.xml" />
     </files>
 </package>

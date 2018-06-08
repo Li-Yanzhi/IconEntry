@@ -21,6 +21,11 @@ namespace IconEntrySample.Droid
 {
     public class MyIconEntryRenderer : IconEntryRenderer
     {
+        public MyIconEntryRenderer(Context context)
+            : base(context)
+        {
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
